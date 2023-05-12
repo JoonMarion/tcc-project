@@ -20,7 +20,6 @@ app.use('/api/auth',authRoutes)
 const server = http.createServer(app)
 
 
-
 mongoose.connect(process.env.MONGO_URI).then(()=> {
     server.listen(PORT,() => {
         console.log(`server ta escutando na porta ${PORT}`)
