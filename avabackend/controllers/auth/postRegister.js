@@ -11,7 +11,7 @@ const postRegister = async (req,res) => {
         //user já existe?
         const userExists = await User.exists({ mail:mail.toLowerCase() });
         if(userExists){
-            return res.status(409).send('Email já está sendo usando') //para aqui se já existir
+            return res.status(409).send('Email já está sendo utilizado!') //para aqui se já existir
         }
 
         //encriptar a senha
@@ -47,7 +47,7 @@ const postRegister = async (req,res) => {
             }
         })
     }catch(err){
-        return res.status(500).send('Erro. Tenta novamente...')
+        return res.status(500).send('Erro. Tente novamente...')
     }
 }
 

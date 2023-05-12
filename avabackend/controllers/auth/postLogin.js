@@ -37,7 +37,7 @@ const postLogin = async (req,res) => {
         }
 
         //se user n foi achado:
-        return res.status(400).send('Credenciais inválidas.Tente novamente.')
+        return res.status(400).send('Credenciais inválidas. Tente novamente.')
 
     }catch(error){
         return res.status(500).send('Algo deu errado ao logar. Tente novamente!');
