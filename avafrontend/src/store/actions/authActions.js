@@ -24,9 +24,8 @@ const login = (userDetails, navigate) => {
         const response = await api.login(userDetails);
         console.log(response);
 
-        if (response.error || response.status !== 200) {
-            console.log(response?.data);
-            dispatch(openAlertMessage(response?.data));
+        if (response.error) {
+            dispatch(openAlertMessage(response?.exception?.response?.data));
         } else {
             const { userDetails } = response?.data;
             localStorage.setItem('user', JSON.stringify(userDetails));
@@ -43,7 +42,7 @@ const register = (userDetails, navigate) => {
         console.log(response);
 
         if (response.error) {
-            dispatch(openAlertMessage(response?.data));
+            dispatch(openAlertMessage(response?.exception?.response?.data));
         } else {
             const { userDetails } = response?.data;
             localStorage.setItem('user', JSON.stringify(userDetails));
