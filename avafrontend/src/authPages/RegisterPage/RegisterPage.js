@@ -9,7 +9,7 @@ import { getActions } from '../../store/actions/authActions';
 import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = ({ register }) => {
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     const [mail, setMail] = useState('');
     const [username, setUsername] = useState('');
@@ -24,7 +24,7 @@ const RegisterPage = ({ register }) => {
             password,
         };
 
-        register(userDetails, history);
+        register(userDetails, navigate);
     };
 
     useEffect(() => {
