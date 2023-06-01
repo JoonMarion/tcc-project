@@ -31,7 +31,7 @@ export default function DrowpdownMenu() {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                <MenuItem onClick={logout}>logout</MenuItem>
+                <MenuItem onClick={logout}>Sair</MenuItem>
             </Menu>
         </div>
     );
