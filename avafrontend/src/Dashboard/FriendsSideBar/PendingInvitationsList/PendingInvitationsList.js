@@ -6,22 +6,15 @@ const DUMMY_INVITATIONS = [
     {
         _id: '1',
         senderId: {
-            username: 'João Silva',
+            username: 'João',
             mail: 'joaosilva@ad.com',
         },
     },
     {
         _id: '2',
         senderId: {
-            username: 'Carlos Eduardo',
+            username: 'Carlos',
             mail: 'carloseduardo@ad.com',
-        },
-    },
-    {
-        _id: '3',
-        senderId: {
-            username: 'José Carlos',
-            mail: 'josecarlos@ad.com',
         },
     },
 ];
